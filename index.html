@@ -47,7 +47,11 @@
   td:first-child{font-weight:600}
   @media(max-width:560px){table{font-size:.85rem} th,td{padding:6px 7px}}
   details{border:1px solid var(--line);border-radius:10px;margin:9px 0;padding:0 13px;background:#fcfdff}
-  summary{cursor:pointer;font-weight:700;padding:11px 4px;list-style:none}
+  summary{cursor:pointer;font-weight:700;padding:11px 4px 11px 32px;list-style:none;position:relative;border-radius:8px}
+  summary:hover{background:#eef5f4}
+  summary::after{content:"▾";position:absolute;left:11px;top:10px;color:var(--p);font-size:1.15rem;line-height:1;transition:transform .2s}
+  details[open]>summary::after{transform:rotate(180deg)}
+  .qhint{font-size:.72rem;font-weight:400;color:var(--muted)}
   summary::-webkit-details-marker{display:none}
   summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);border-radius:6px;padding:3px 7px;display:inline-block;margin-inline-end:8px;vertical-align:middle}
   summary .freq,summary span{vertical-align:middle}
@@ -181,7 +185,7 @@
       <tr><td><b>חוק יסוד: כבוד האדם וחירותו</b></td><td>חוק היסוד שממנו גזר בג"ץ זכויות חברתיות (למשל "קיום בכבוד").</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>מהן "זכויות חברתיות-כלכליות", ומדוע מדינה דמוקרטית רואה אחריות לספקן?</summary>
       <div class="ans"><b>תשובה:</b> אלה זכויות לתנאי חיים בסיסיים (מזון, דיור, בריאות, חינוך, עבודה). מדינה דמוקרטית רואה במרכז את <b>כבוד האדם</b>, וגורסת שבלי תנאי קיום בסיסיים אי אפשר לחיות בכבוד ולממש את שאר הזכויות. מתוך <b>ההסכמה החברתית</b> והמחויבות ההדדית בין האזרחים, החברה לוקחת <b>אחריות</b> להבטיח לכל פרט רמת חיים בסיסית.</div></details>
     <details><summary>הסבירו את הוויכוח האם זכויות חברתיות-כלכליות הן "זכויות" כמו האזרחיות והפוליטיות. (היעזרו בהבחנה של ברלין)</summary>
@@ -261,7 +265,7 @@
       <tr><td><b>מסי ארנונה</b></td><td>מסים שרשות מקומית גובה (בעיקר מעסקים) — מקור הפער בין רשויות.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו שני שירותים חברתיים שמספקת מדינת הרווחה, והסבירו כיצד הם תורמים לצמצום פערים. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px;margin-inline-start:auto;flex:none">בנוסח 2022</span></summary>
       <div class="ans"><b>תשובה:</b> (1) <b>בריאות</b> — מערכת בריאות ציבורית מבטיחה טיפול רפואי גם למי שאינו יכול לממן ביטוח פרטי. (2) <b>חינוך</b> — חינוך ציבורי נגיש לכול. <b>צמצום פערים:</b> שני אלה ניתנים בחינם/בסבסוד, כך שגם בני שכבות חלשות מקבלים בריאות וחינוך — מה שמקטין את הפער ומגדיל את סיכוייהם להשתלב בעתיד בשוק העבודה.</div></details>
     <details><summary>מהו "כשל שוק"? הציגו דוגמה אחת, והסבירו מדוע במצב זה המדינה מתערבת.</summary>
@@ -379,7 +383,7 @@
       <tr><td><b>הדרך השלישית</b></td><td>גישה המשלבת שוק חופשי עם רשת ביטחון של המדינה.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו את ההבדל בין ההשקפה הסוציאל-דמוקרטית לנאו-ליברלית בנוגע ל<b>אחריות לרווחת הפרט</b> ול<b>מעורבות המדינה בכלכלה</b>. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px">חוזר כל שנה</span></summary>
       <div class="ans"><b>תשובה:</b> <b>סוציאל-דמוקרטית:</b> האחריות לרווחה מוטלת בעיקר על <b>המדינה</b>, והמדינה <b>מעורבת רבות</b> בכלכלה כדי לספק שירותים ולצמצם פערים. <b>נאו-ליברלית:</b> האחריות בעיקר על <b>הפרט</b>, משפחתו וקהילתו, והמדינה צריכה להתערב בכלכלה <b>מינימום</b> ("שומר לילה") כדי לשמור על חירות הפרט ועל יעילות השוק.</div></details>
     <details><summary>הציגו את המושג <b>מבחן אמצעים</b>, והסבירו לאיזו גישה (אוניברסלית/סלקטיבית) הוא שייך ומדוע.</summary>
@@ -485,7 +489,7 @@
       <tr><td><b>רפורמה</b></td><td>שינוי וארגון מחדש של מצב קיים.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו את <b>החברה האזרחית</b> כגורם המשפיע על המדיניות, והסבירו דרך אחת שבה היא משפיעה. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px">בנוסח 2022</span></summary>
       <div class="ans"><b>תשובה:</b> <b>החברה האזרחית</b> = ארגונים, עמותות ואזרחים (המגזר השלישי) הפועלים להשפיע על המדיניות. <b>דרך השפעה:</b> <b>מחאה ושביתות</b> (כמו המחאה החברתית) המעלות נושא לסדר היום ומפעילות לחץ על מקבלי ההחלטות; או <b>שתדלנות (לובינג)</b> — שכנוע ישיר של נבחרי ציבור.</div></details>
     <details><summary>הציגו שלב אחד ממעגל המדיניות, והסבירו מה נעשה בו. <span style="font-size:.74rem;background:#fff3cd;color:#8a6d00;border-radius:6px;padding:2px 8px">בנוסח 2024</span></summary>
@@ -590,7 +594,7 @@
       <tr><td><b>מס הכנסה שלילי (מענק עבודה)</b></td><td>מענק לעובדים בשכר נמוך — מתגמל עבודה במקום להעניש.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו שתי מטרות של מערכת הביטחון הסוציאלי, והסבירו כיצד אחת מהן מתממשת. <span style="font-size:.74rem;background:#fff3cd;color:#8a6d00;border-radius:6px;padding:2px 8px">בנוסח 2024</span></summary>
       <div class="ans"><b>תשובה:</b> (1) <b>צמצום העוני והפערים</b> ו-(2) <b>סיוע למי שאינו יכול להתפרנס</b>. <b>כיצד מתממשת הראשונה:</b> באמצעות <b>חלוקה מחדש אנכית</b> — המערכת גובה דמי ביטוח ומסים מבעלי הכנסה גבוהה ומעבירה קצבאות לבעלי הכנסה נמוכה, וכך מקטינה את הפער בהכנסה הפנויה ומורידה את שיעור העוני.</div></details>
     <details><summary>הציגו שתי שיטות למדידת עוני (היחסית והמוחלטת), והסבירו את ההבדל ביניהן. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px">בנוסח 2025</span></summary>
@@ -688,7 +692,7 @@
       <tr><td><b>רגולציה (אסדרה)</b></td><td>קביעת כללים ופיקוח על גוף שהופרט.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו יתרון אחד וחיסרון אחד בהפרטת שירותים בעלי אופי מסחרי. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px">בנוסח 2024–2025</span></summary>
       <div class="ans"><b>תשובה:</b> <b>יתרון:</b> המגזר הפרטי <b>יעיל יותר</b> — בזכות התחרות והמוטיבציה לרווח הוא עשוי לספק שירות טוב יותר ובמחיר זול יותר. <b>חיסרון:</b> פגיעה ב<b>אספקה שוויונית</b> — גוף פרטי עלול להעלות מחירים ולהזניח אוכלוסיות חלשות ואזורי פריפריה שאינם רווחיים.</div></details>
     <details><summary>מהו עיקרון ה<b>אחריותיות</b>, ומדוע הוא חשוב בהפרטת שירותים חברתיים?</summary>
@@ -766,7 +770,7 @@
       <tr><td><b>התנועה נגד הגלובליזציה</b></td><td>ארגונים הקוראים להגביל תאגידים ולהגן על עובדים והסביבה.</td></tr>
     </table>
 
-    <h3>שאלות לתרגול</h3>
+    <h3 class="qa-h">שאלות לתרגול <span class="qhint">▾ לחצו על שאלה כדי לפתוח את התשובה</span></h3>
     <details><summary>הציגו שני תחומים שבהם באה לידי ביטוי הגלובליזציה הכלכלית, והסבירו אחד מהם. <span style="font-size:.74rem;background:#ffe0e0;color:#c0392b;border-radius:6px;padding:2px 8px">בנוסח 2025</span></summary>
       <div class="ans"><b>תשובה:</b> (1) <b>התרחבות הסחר הבין-לאומי</b> ו-(2) <b>פעילות תאגידים רב-לאומיים</b>. <b>הסבר לראשון:</b> הסכמי סחר חופשי מסירים מכסים ומגבלות על יבוא וייצוא, כך שסחורות זורמות בחופשיות בין מדינות — מה שמוזיל מחירים ומגדיל את הסחר, אך עלול לפגוע בתעשייה המקומית.</div></details>
     <details><summary>הציגו יתרון אחד וחיסרון אחד של הגלובליזציה הכלכלית.</summary>
