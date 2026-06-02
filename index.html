@@ -45,9 +45,10 @@
   td:first-child{font-weight:600}
   @media(max-width:560px){table{font-size:.85rem} th,td{padding:6px 7px}}
   details{border:1px solid var(--line);border-radius:10px;margin:9px 0;padding:0 13px;background:#fcfdff}
-  summary{cursor:pointer;font-weight:700;padding:11px 4px;list-style:none;display:flex;gap:8px}
+  summary{cursor:pointer;font-weight:700;padding:11px 4px;list-style:none}
   summary::-webkit-details-marker{display:none}
-  summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);border-radius:6px;padding:3px 7px;flex:none;margin-top:2px}
+  summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);border-radius:6px;padding:3px 7px;display:inline-block;margin-inline-end:8px;vertical-align:middle}
+  summary .freq,summary span{vertical-align:middle}
   .ans{border-top:1px dashed var(--line);padding:9px 2px 13px}
   .ans b{color:#0d3b66}
   .top{display:block;text-align:center;color:var(--muted);text-decoration:none;font-size:.84rem;margin:6px 0}
