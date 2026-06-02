@@ -20,6 +20,8 @@
   .seg button{font-family:inherit;font-size:.92rem;font-weight:700;cursor:pointer;border:2px solid var(--p);background:#fff;color:var(--p);border-radius:10px;padding:7px 14px}
   .seg button[aria-pressed="true"]{background:var(--p);color:#fff}
   .saved-note{font-size:.8rem;color:var(--ok);margin-top:6px;min-height:1em}
+  .printbtn{font-family:inherit;font-size:.9rem;font-weight:700;cursor:pointer;border:2px solid #455a64;background:#455a64;color:#fff;border-radius:10px;padding:7px 14px;margin-inline-start:8px}
+  .printbtn:hover{filter:brightness(1.1)}
   nav{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0}
   nav b{display:block;margin-bottom:8px;color:var(--muted);font-size:.9rem}
   nav a{display:inline-block;margin:4px;padding:6px 12px;border-radius:9px;text-decoration:none;font-weight:600;font-size:.9rem;background:var(--pbg);color:var(--p)}
@@ -58,6 +60,26 @@
   body.mode-deep .t-learn,body.mode-deep .t-deep{display:block}
   body.mode-full .t-learn,body.mode-full .t-deep{display:block}
   details{display:none} body.mode-full details{display:block}
+  /* ---- print / offline mode ---- */
+  @media print{
+    .controls,nav,.top,.saved-note,.printbtn,.sample{display:none !important}
+    body{background:#fff;color:#000;font-size:11.5pt}
+    header{background:#fff !important;color:#000 !important;padding:0 0 6px}
+    header h1,header .sub{color:#000}
+    header .badge{background:#fff;color:#000;border:1px solid #777}
+    main{max-width:none;padding:0}
+    .t-learn,.t-deep{display:block !important}          /* show all detail levels */
+    details{display:block !important;border:1px solid #ccc}
+    details .ans,details:not([open])>*{display:block !important} /* reveal Q&A answers */
+    summary::before{content:"שאלה: "}
+    section{box-shadow:none;border:1px solid #ccc;margin:10px 0}
+    table{box-shadow:none}
+    th,.shaar{background:#e6e6e6 !important;color:#000 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    tr:nth-child(even) td{background:#f3f3f3 !important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    h2,h3,h4{break-after:avoid;page-break-after:avoid}
+    table,figure,.mnem,.essence,details{break-inside:avoid;page-break-inside:avoid}
+    a{color:#000;text-decoration:none}
+  }
 </style>
 </head>
 <body class="mode-deep">
@@ -80,6 +102,7 @@
       <button data-mode="deep">מעמיק</button>
       <button data-mode="full">מורחב</button>
     </span>
+    <button type="button" id="printBtn" class="printbtn">🖨️ הדפסה / שמירה כ-PDF</button>
     <div class="saved-note" id="savedNote"></div>
   </div>
 
@@ -701,6 +724,10 @@
   document.querySelectorAll('.seg-mode button').forEach(function(b){b.addEventListener('click',function(){
     var v=b.dataset.mode;try{localStorage.setItem(KEY,v);}catch(e){}apply(v);
     if(note){note.textContent='✓ נשמר';clearTimeout(t);t=setTimeout(function(){note.textContent='';},1500);}});});
+  var pb=document.getElementById('printBtn');
+  if(pb) pb.addEventListener('click',function(){window.print();});
+  window.addEventListener('beforeprint',function(){document.querySelectorAll('details').forEach(function(d){d.dataset.po=d.open?'1':'0';d.open=true;});});
+  window.addEventListener('afterprint',function(){document.querySelectorAll('details').forEach(function(d){d.open=d.dataset.po==='1';});});
 })();
 </script>
 <footer>מבוסס על הספר "אתגר הרווחה במדינה הדמוקרטית" (גודמן וברק, מט"ח) והמיקוד הרשמי תשפ"ו · עזר למידה, אינו תחליף לספר · בהצלחה!</footer>
