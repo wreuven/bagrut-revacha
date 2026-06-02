@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>מדיניות הרווחה (שאלון 34371) · מדריך למידה</title>
+<style>
+  :root{--p:#00796b;--pbg:#e0f2f1;--ink:#1f2733;--muted:#5b6573;--line:#e0e0e8;--bg:#f6f7fb;--ok:#2e7d32}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Segoe UI","Arial Hebrew",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;font-size:18px}
+  header{background:linear-gradient(135deg,#00695c,#00897b);color:#fff;padding:28px 18px;text-align:center}
+  header h1{margin:0 0 6px;font-size:1.55rem} header .sub{opacity:.93;font-size:.98rem}
+  .badge{display:inline-block;background:#ffd166;color:#5a3d00;font-weight:700;border-radius:20px;padding:5px 16px;margin-top:12px;font-size:.9rem}
+  main{max-width:900px;margin:0 auto;padding:18px 16px 70px}
+  .callout{background:#fff8e1;border:1px solid #ffe082;border-radius:12px;padding:12px 16px;margin:14px 0}
+  .sample{background:#e8f1fb;border:1px solid #bcd6f0;border-radius:12px;padding:12px 16px;margin:14px 0}
+  .controls{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:14px 0;box-shadow:0 1px 3px rgba(0,0,0,.05);text-align:center;position:sticky;top:0;z-index:20}
+  .ctl-label{font-weight:700;color:var(--muted);font-size:.9rem;margin-inline-end:6px}
+  .seg{display:inline-flex;gap:6px;flex-wrap:wrap;justify-content:center}
+  .seg button{font-family:inherit;font-size:.92rem;font-weight:700;cursor:pointer;border:2px solid var(--p);background:#fff;color:var(--p);border-radius:10px;padding:7px 14px}
+  .seg button[aria-pressed="true"]{background:var(--p);color:#fff}
+  .saved-note{font-size:.8rem;color:var(--ok);margin-top:6px;min-height:1em}
+  nav{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 18px;margin:14px 0}
+  nav b{display:block;margin-bottom:8px;color:var(--muted);font-size:.9rem}
+  nav a{display:inline-block;margin:4px;padding:6px 12px;border-radius:9px;text-decoration:none;font-weight:600;font-size:.9rem;background:var(--pbg);color:var(--p)}
+  nav a.todo{opacity:.5}
+  section{background:#fff;border-radius:14px;padding:16px 20px 10px;margin:14px 0;border:1px solid var(--line);box-shadow:0 1px 4px rgba(0,0,0,.04)}
+  .ch{border-top:6px solid var(--p)}
+  h2{font-size:1.35rem;color:var(--p);margin:.2em 0 .5em}
+  h3{font-size:1.16rem;color:var(--p);margin:.9em 0 .3em}
+  .essence{background:var(--pbg);border-inline-start:4px solid var(--p);border-radius:8px;padding:8px 12px;margin:8px 0;font-weight:600}
+  .essence b{color:var(--p)}
+  .t-learn,.t-deep{margin:.4em 0 .8em}
+  .t-deep{background:#fbfcfe;border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+  .t-deep h4{margin:.2em 0 .3em;color:#0d3b66;font-size:1rem}
+  ul{margin:.3em 0 .8em;padding-inline-start:22px} li{margin:.3em 0}
+  .key{background:#fff8e1;border:1px solid #ffe082;border-radius:7px;padding:1px 7px}
+  .mnem{background:#fffbe6;border:1px solid #ffe082;border-radius:10px;padding:10px 14px;margin:10px 0}
+  .mnem b{color:#8a6d00}
+  .out{background:#fdecea;border:1px solid #ef9a9a;border-radius:10px;padding:8px 13px;margin:10px 0;font-size:.92rem;color:#7a2d24}
+  details{border:1px solid var(--line);border-radius:10px;margin:9px 0;padding:0 13px;background:#fcfdff}
+  summary{cursor:pointer;font-weight:700;padding:11px 4px;list-style:none;display:flex;gap:8px}
+  summary::-webkit-details-marker{display:none}
+  summary::before{content:"שאלה";font-size:.72rem;background:#eef2f7;color:var(--muted);border-radius:6px;padding:3px 7px;flex:none;margin-top:2px}
+  .ans{border-top:1px dashed var(--line);padding:9px 2px 13px}
+  .ans b{color:#0d3b66}
+  .top{display:block;text-align:center;color:var(--muted);text-decoration:none;font-size:.84rem;margin:6px 0}
+  footer{text-align:center;color:var(--muted);font-size:.83rem;padding:24px 16px 50px}
+  .t-learn,.t-deep{display:none}
+  body.mode-learn .t-learn{display:block}
+  body.mode-deep .t-learn,body.mode-deep .t-deep{display:block}
+  body.mode-full .t-learn,body.mode-full .t-deep{display:block}
+  details{display:none} body.mode-full details{display:block}
+</style>
+</head>
+<body class="mode-deep">
+<header>
+  <h1>מדיניות הרווחה — אזרחות הגבר</h1>
+  <div class="sub">שאלון 34371 · ספר "אתגר הרווחה במדינה הדמוקרטית"</div>
+  <div class="badge">📅 11 ביוני 2026</div>
+</header>
+
+<main>
+  <div class="sample"><b>🔎 דוגמת כיול:</b> כרגע בנוי <b>פרק 1 בלבד</b>, בעומק מלא — כדי שתחליטו אם זו רמת הפירוט הרצויה. אם כן, אבנה כך את שאר הפרקים (2,3,4,6,7,8).</div>
+
+  <div class="callout"><b>איך ללמוד:</b> בחרו <b>מצב</b> למעלה — <b>סקירה</b> (תמצית) · <b>לימוד</b> (הסבר) · <b>מעמיק</b> (לעומק + דוגמאות) · <b>מורחב</b> (+ שאלות תרגול). הבחירה נשמרת.</div>
+
+  <div class="controls">
+    <span class="ctl-label">📏 מצב:</span>
+    <span class="seg seg-mode">
+      <button data-mode="quick">סקירה</button>
+      <button data-mode="learn">לימוד</button>
+      <button data-mode="deep">מעמיק</button>
+      <button data-mode="full">מורחב</button>
+    </span>
+    <div class="saved-note" id="savedNote"></div>
+  </div>
+
+  <nav><b>פרקים</b>
+    <a href="#c1">1 · הזכות לחיות ברווחה</a>
+    <a class="todo" href="#">2 · מדינת הרווחה (בקרוב)</a>
+    <a class="todo" href="#">3 · השקפות (בקרוב)</a>
+    <a class="todo" href="#">4 · גיבוש מדיניות (בקרוב)</a>
+    <a class="todo" href="#">6 · ביטחון סוציאלי (בקרוב)</a>
+    <a class="todo" href="#">7 · הפרטה (בקרוב)</a>
+    <a class="todo" href="#">8 · גלובליזציה (בקרוב)</a>
+  </nav>
+
+  <!-- ===================== פרק 1 ===================== -->
+  <section class="ch" id="c1">
+    <h2>פרק 1 — הזכות לחיות ברווחה</h2>
+    <p class="essence"><b>שאלת הפרק:</b> האם לכל אדם יש <b>זכות</b> לתנאי חיים בסיסיים (מזון, דיור, בריאות, חינוך, עבודה) — ומי אחראי לספק אותם?</p>
+
+    <h3>1. אחריות החברה לרווחת הפרט</h3>
+    <p class="essence">במדינה דמוקרטית, מתוך ערך <b>כבוד האדם</b>, יש לחברה <b>אחריות</b> להבטיח לכל פרט תנאי חיים בסיסיים בכבוד — אלו ה<b>זכויות החברתיות-כלכליות</b>.</p>
+    <div class="t-learn">
+      הדמוקרטיה מציבה את <b>כבוד האדם</b> במרכז. מכאן נגזר שלכל אדם מגיעים תנאי חיים בסיסיים — מזון, דיור, בריאות, חינוך ועבודה — שבלעדיהם לא ניתן לחיות בכבוד. זכויות אלה נקראות <b>זכויות חברתיות-כלכליות</b>, ומקורן ב<b>הסכמה החברתית</b>: התפיסה שחברי החברה ערבים זה לזה ולוקחים אחריות הדדית על רווחת כולם. הזכויות האלה הוכרו בעולם בעיקר אחרי מלחמת העולם השנייה — למשל ב<b>"הכרזה לכל באי עולם בדבר זכויות האדם" (1948)</b>.
+    </div>
+    <div class="t-deep">
+      <h4>הרקע הרעיוני — תומאס מארשל</h4>
+      הסוציולוג הבריטי <b>תומאס מארשל</b> (במאמרו "אזרחות ומעמד חברתי", 1950) תיאר <b>שלושה דורות של זכויות</b> שהתפתחו בהיסטוריה:
+      <ul>
+        <li><b>זכויות אזרחיות</b> (המאה ה-18) — חירות, קניין, שוויון בפני החוק.</li>
+        <li><b>זכויות פוליטיות</b> (המאה ה-19) — הזכות לבחור ולהיבחר.</li>
+        <li><b>זכויות חברתיות-כלכליות</b> (המאה ה-20) — הזכות לרמת חיים בסיסית, חינוך, בריאות.</li>
+      </ul>
+      טענתו המרכזית: <b>אזרחות מלאה</b> אינה רק זכויות אזרחיות ופוליטיות — היא כוללת גם זכויות חברתיות, שכן בלי תנאי קיום בסיסיים אי אפשר לממש את שאר הזכויות באמת. הבסיס לכך הוא <b>המחויבות ההדדית</b> בין חברי החברה.
+      <h4>דוגמה</h4>
+      ההכרזה לכל באי עולם (1948) מעגנת בסעיפיה זכויות חברתיות-כלכליות מפורשות: הזכות לביטחון סוציאלי, הזכות לעבודה ולשכר הוגן, והזכות לחינוך — ביטוי לכך שהקהילה הבין-לאומית הכירה בזכויות אלה כחלק מכבוד האדם.
+    </div>
+
+    <h3>2. האם אלה "זכויות" אמיתיות? — הוויכוח</h3>
+    <p class="essence">יש ויכוח אם הזכויות החברתיות-כלכליות שוות במעמדן לזכויות האזרחיות והפוליטיות, או "חלשות" מהן.</p>
+    <div class="t-learn">
+      <b>עמדה אחת (בעד):</b> אלה זכויות מלאות — "זכויות חיוביות" — והמדינה <b>חייבת לפעול</b> ולהקצות משאבים כדי לממש אותן (לבנות בתי חולים, בתי ספר, לשלם קצבאות).
+      <br><b>עמדה שנייה (מסתייגת):</b> אלה אינן זכויות במלוא המובן. בניגוד לזכויות אזרחיות ופוליטיות, שדורשות מהמדינה רק <b>להימנע</b> מהתערבות, הזכויות החברתיות דורשות <b>משאבים רבים</b> — ואין "סל" אחד מוסכם של מה בדיוק מגיע לכל אדם.
+    </div>
+    <div class="t-deep">
+      <h4>זכויות "שליליות" מול "חיוביות" — ישעיהו ברלין</h4>
+      ההוגה <b>ישעיהו ברלין</b> הבחין בין <b>"שני מושגים של חירות"</b>:
+      <ul>
+        <li><b>חירות שלילית</b> (חופש <i>מ</i>־) — היעדר הפרעה. מספיק שהמדינה <b>לא תתערב</b>. כך פועלות הזכויות האזרחיות והפוליטיות.</li>
+        <li><b>חירות חיובית</b> (חופש <i>ל</i>־) — היכולת בפועל לממש משהו. כאן המדינה צריכה <b>לפעול ולספק משאבים</b>. כך פועלות הזכויות החברתיות-כלכליות.</li>
+      </ul>
+      מכאן נובע הקושי: מימוש זכויות חברתיות תלוי ב<b>תקציב מוגבל</b> ובהכרעה ערכית מה לכלול בו — ולכן יש שיטענו שהן "חלשות" יותר. מנגד יטענו שגם זכויות פוליטיות עולות כסף (קלפיות, בתי משפט), ושבלי תנאי קיום בסיסיים שאר הזכויות חסרות משמעות.
+    </div>
+
+    <h3>3. כיצד המדינה מעגנת ומגִנה על הזכויות</h3>
+    <p class="essence">המדינה יכולה לעגן זכויות חברתיות-כלכליות ב<b>חוקה</b> או ב<b>חוקים רגילים</b>. בישראל — בעיקר בחוקים רגילים ובפסיקת <b>בג"ץ</b>.</p>
+    <div class="t-learn">
+      <b>שתי דרכי עיגון:</b> (1) ב<b>חוקה</b> — מעמד גבוה, מטיל על השלטון חובה מפורשת שקשה לשנותה; (2) ב<b>חוקים רגילים</b> — ניתן יותר לשנותם. בישראל <b>אין חוקה</b>, ורוב הזכויות החברתיות-כלכליות <b>אינן מעוגנות בחוק יסוד</b> — אך <b>בג"ץ</b> גזר חלק מהן מתוך <b>חוק יסוד: כבוד האדם וחירותו</b>.
+    </div>
+    <div class="t-deep">
+      <h4>דוגמאות מהפסיקה</h4>
+      <ul>
+        <li><b>עניין "לתת" (2007):</b> בעקבות עתירה, הכיר בג"ץ ב<b>"זכות לביטחון תזונתי"</b> כזכות יסוד הנגזרת מ<b>כבוד האדם</b> — והטיל על המדינה אחריות לדאוג לכך.</li>
+        <li><b>הסעות לחינוך מיוחד (2000):</b> בג"ץ חייב את המדינה לממן הסעות לילדים עם צרכים מיוחדים, מתוך <b>הזכות לחינוך</b> ולכבוד.</li>
+      </ul>
+      המגמה: מכיוון שאין עיגון חוקתי מפורש, <b>בית המשפט</b> ממלא תפקיד מרכזי בהגנה על זכויות חברתיות-כלכליות, על-ידי פרשנות מרחיבה של "כבוד האדם".
+    </div>
+
+    <div class="out">⛔ <b>לא בבחינה (פרק 1):</b> זכויות חברתיות-כלכליות בדתות (יהדות/אסלאם/נצרות, עמ' 14–15) · דברי הסבר ומשימות (16–17) · הצעת חוק הדיור בר-השגה (17).</div>
+
+    <h3>שאלות לתרגול</h3>
+    <details><summary>מהן "זכויות חברתיות-כלכליות", ומדוע מדינה דמוקרטית רואה אחריות לספקן?</summary>
+      <div class="ans"><b>תשובה:</b> אלה זכויות לתנאי חיים בסיסיים (מזון, דיור, בריאות, חינוך, עבודה). מדינה דמוקרטית רואה במרכז את <b>כבוד האדם</b>, וגורסת שבלי תנאי קיום בסיסיים אי אפשר לחיות בכבוד ולממש את שאר הזכויות. מתוך <b>ההסכמה החברתית</b> והמחויבות ההדדית בין האזרחים, החברה לוקחת <b>אחריות</b> להבטיח לכל פרט רמת חיים בסיסית.</div></details>
+    <details><summary>הסבירו את הוויכוח האם זכויות חברתיות-כלכליות הן "זכויות" כמו האזרחיות והפוליטיות. (היעזרו בהבחנה של ברלין)</summary>
+      <div class="ans"><b>תשובה:</b> לפי ברלין יש <b>חירות שלילית</b> (חופש מ-, הדורשת רק שהמדינה לא תתערב — כך הזכויות האזרחיות-פוליטיות) ו<b>חירות חיובית</b> (חופש ל-, הדורשת שהמדינה תפעל ותקצה משאבים — כך הזכויות החברתיות). <b>הטוענים שהן זכויות חלשות:</b> מימושן דורש משאבים רבים ואין סל מוסכם. <b>הטוענים שהן זכויות מלאות:</b> גם זכויות פוליטיות עולות כסף, ובלי קיום בסיסי שאר הזכויות ריקות מתוכן.</div></details>
+    <details><summary>כיצד מוגנות הזכויות החברתיות-כלכליות בישראל, בהיעדר עיגון חוקתי? תנו דוגמה.</summary>
+      <div class="ans"><b>תשובה:</b> בישראל אין חוקה והזכויות החברתיות אינן מעוגנות בחוק יסוד; הן מוגנות בעיקר ב<b>חוקים רגילים</b> וב<b>פסיקת בג"ץ</b>, הגוזר אותן מ<b>חוק יסוד: כבוד האדם וחירותו</b>. <b>דוגמה:</b> בעניין "לתת" (2007) הכיר בג"ץ ב"זכות לביטחון תזונתי" כנגזרת מכבוד האדם.</div></details>
+    <a class="top" href="#">↑ לראש</a>
+  </section>
+</main>
+
+<script>
+(function(){
+  var body=document.body, KEY='revacha-mode-v1';
+  function apply(m){body.classList.remove('mode-quick','mode-learn','mode-deep','mode-full');body.classList.add('mode-'+m);
+    document.querySelectorAll('.seg-mode button').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.mode===m?'true':'false');});}
+  var m='deep';try{m=localStorage.getItem(KEY)||'deep';}catch(e){}
+  apply(m);
+  var note=document.getElementById('savedNote'),t;
+  document.querySelectorAll('.seg-mode button').forEach(function(b){b.addEventListener('click',function(){
+    var v=b.dataset.mode;try{localStorage.setItem(KEY,v);}catch(e){}apply(v);
+    if(note){note.textContent='✓ נשמר';clearTimeout(t);t=setTimeout(function(){note.textContent='';},1500);}});});
+})();
+</script>
+<footer>מבוסס על הספר "אתגר הרווחה במדינה הדמוקרטית" (גודמן וברק, מט"ח) והמיקוד הרשמי תשפ"ו · עזר למידה, אינו תחליף לספר · בהצלחה!</footer>
+</body>
+</html>
